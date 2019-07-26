@@ -3,12 +3,11 @@ pipeline {
   stages {
     stage('Change Directory') {
       steps {
-        sh '''cd Jenkins/jenkins_node_11.X
-'''
         dir(path: 'Jenkins/jenkins_node_11.X/') {
           sh 'ls'
         }
 
+        sh 'docker build -t jenkins .'
       }
     }
   }
