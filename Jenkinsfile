@@ -5,9 +5,9 @@ pipeline {
       steps {
         dir(path: 'Jenkins/jenkins_node_11.X/') {
           sh 'ls'
+          sh 'docker build -t jenkins .'
         }
 
-        sh 'docker build -t jenkins .'
       }
     }
   }
