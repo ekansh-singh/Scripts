@@ -9,9 +9,9 @@ pipeline {
 '''
           }
         }
-        stage('build docker') {
+        stage('check current working directory') {
           steps {
-            sh 'docker build -t jenkins.'
+            sh 'echo $PWD'
           }
         }
       }
